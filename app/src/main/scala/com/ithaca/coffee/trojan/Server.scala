@@ -41,7 +41,7 @@ trait Service extends Marshallers with Rejections {
   implicit val materializer: FlowMaterializer
 
   val routes = {
-    logRequest("trojan-gate") {
+    logRequest("file-server") {
       pathPrefix("app") {
         (get & path(Segments)) { file =>
           val path = file mkString "/"
