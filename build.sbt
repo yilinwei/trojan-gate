@@ -4,6 +4,7 @@ version := "1.0.0"
 
 scalaVersion := "2.11.6"
 
+
 val commonSettings = Seq(
   organization := "com.ithaca.coffee",
   version := "1.0.0",
@@ -12,7 +13,9 @@ val commonSettings = Seq(
 
   resolvers ++= Seq(
     Resolver.sonatypeRepo("releases"),
-    Resolver.sonatypeRepo("snapshots")
+    Resolver.sonatypeRepo("snapshots"),
+    Resolver.typesafeRepo("releases"),
+    Resolver.typesafeRepo("snapshots")
   ),
 
   libraryDependencies ++= Seq(
@@ -21,5 +24,6 @@ val commonSettings = Seq(
   )
 )
 
-lazy val app = (project in file("app")) settings commonSettings
+lazy val app = ((project in file("app")) settings commonSettings).enablePlugins(SbtWeb)
 lazy val root = (project in file(".")) aggregate app
+

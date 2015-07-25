@@ -1,0 +1,10 @@
+{
+  "name": "trojan-gate",
+  "description": "website for ithaca",
+  "version": "0.0.0",
+  "homepage": "https://github.com/yilinwei/trojan-gate",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5"
+  }
+}

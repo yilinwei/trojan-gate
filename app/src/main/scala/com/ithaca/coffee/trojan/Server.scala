@@ -55,5 +55,4 @@ trait Service extends Marshallers with Rejections {
       }
     }
   }
-
 }
